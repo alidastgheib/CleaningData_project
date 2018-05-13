@@ -9,7 +9,9 @@ This script is written for the assignment project for the "Getting and Cleaning 
    This data frame is in the global environment as "tidy_dataframe"
 5. the tidy output containing only "mean" features is extracted in the same way and written in a TXT file ("tidy_data.txt")
 
-# BY: Ali Dastgheib
-# +98-9377603425
-# jdastgheib@gmail.com
+
+
+## BY: Ali Dastgheib
+### +98-9377603425
+### jdastgheib@gmail.com
  
