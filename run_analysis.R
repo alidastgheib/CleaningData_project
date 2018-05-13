@@ -17,19 +17,19 @@ good_idx <- c(mean_idx, std_idx)
 
 y_train = read.table("./train/y_train.txt"); sub_train = read.table("./train/subject_train.txt")
 y_test = read.table("./test/y_test.txt"); sub_test = read.table("./test/subject_test.txt")
-y_y = rbind.data.frame(y_train, y_test); sub_sub <- rbind.data.frame(sub_train, sub_test)
+y_total = rbind.data.frame(y_train, y_test); sub_total <- rbind.data.frame(sub_train, sub_test)
 
-names(y_y) = "activity"; y_y$activity = as.factor(y_y$activity)
-names(sub_sub) = "subject"; sub_sub$subject = as.factor(sub_sub$subject)
+names(y_total) = "activity"; y_total$activity = as.factor(y_total$activity)
+names(sub_total) = "subject"; sub_total$subject = as.factor(sub_total$subject)
 
-mean_dataframe = cbind.data.frame(sub_sub, y_y, x_total[, mean_idx])
+mean_dataframe = cbind.data.frame(sub_total, y_total, x_total[, mean_idx])
 names(mean_dataframe) <- tolower(names(mean_dataframe))
 names(mean_dataframe) <- gsub("\\()", "", names(mean_dataframe))
 write.table(mean_dataframe, "./tidy_data.txt")
 
 
 ## Output of the run_analysis.R script: 
-tidy_dataframe = cbind.data.frame(sub_sub, y_y, x_total[, good_idx])
+tidy_dataframe = cbind.data.frame(sub_total, y_total, x_total[, good_idx])
 names(tidy_dataframe) <- tolower(names(tidy_dataframe))
 names(tidy_dataframe) <- gsub("\\()", "", names(tidy_dataframe))
 head(tidy_dataframe)
