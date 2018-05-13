@@ -1,6 +1,8 @@
+# the following lines should be commented if you are in the "UCI HAR Dataset" directory.
 main_dir = "C:/Users/Ali_D/Desktop/D_S/my_codes/Getting and Cleaning Data/course_project/UCI HAR Dataset"
-setwd(main_dir)
+setwd(main_dir) 
 
+# if you are in the right directory, start from HERE:
 x_train = read.table("./train/X_train.txt"); # train_feat_names = names(x_train)
 x_test = read.table("./test/X_test.txt"); # test_feat_names = names(x_test)
 x_total = rbind.data.frame(x_train, x_test)
